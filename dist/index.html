@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-poppins bg-gray-100">
+    <nav class="bg-emerald-800 text-white py-3">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-6">
+                    <div class="text-lg font-medium">Get Connected:</div>
+                    <div class="flex items-center space-x-4">
+                        <a href="#" class="text-2xl hover:text-emerald-300 transition duration-300">
+                            <i class="far fa-envelope"></i>
+                        </a>
+                        <a href="#" class="text-2xl hover:text-emerald-300 transition duration-300">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="text-2xl hover:text-emerald-300 transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-2xl hover:text-emerald-300 transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                    <!-- Button with home icon next to the text -->
+                    <button class="bg-emerald-600 text-white px-4 py-2 rounded-md text-lg font-medium hover:bg-emerald-700 transition duration-300 flex items-center space-x-2">
+                        <i class="fas fa-home"></i>
+                        <span>UI GreenCityMetric</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <!-- Replace text with an image logo -->
+                <div class="ml-10">
+                    <img src="images/uigm-logo.png" alt="Logo" class="h-16"> <!-- Adjust height as needed -->
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#" class="text-gray-600 hover:text-emerald-600">About</a>
+                    <a href="#" class="text-gray-600 hover:text-emerald-600">Rankings</a>
+                    <a href="#" class="text-gray-600 hover:text-emerald-600">Media & Activities</a>
+                    <a href="#" class="text-gray-600 hover:text-emerald-600">Our Network</a>
+                    <a href="#" class="text-gray-600 hover:text-emerald-600">Useful Resources</a>
+                    <a href="#" class="text-gray-600 hover:text-emerald-600">Careers</a>
+                </div>
+                <button class="bg-emerald-600 text-white px-4 py-2 rounded-md hover:bg-emerald-700 transition duration-300 flex items-center space-x-2 mr-4">
+                    <i class="fas fa-user"></i> <!-- Profile icon -->
+                    <span>Questionnaire</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    
+
+    <!-- Breadcrumb-like section -->
+    <div class="bg-gray-200">
+        <div class="container mx-auto px-4 py-2 flex items-center text-sm">
+            <a href="#" class="text-emerald-600 hover:text-emerald-700 mr-2">
+                <i class="fas fa-home"></i>
+            </a>
+            <span class="text-gray-500 mx-2">/</span>
+            <span class="text-gray-700">Contact Us</span>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-emerald-600 to-lime-500 text-white">
+        <div class="container mx-auto px-4 py-16">
+            <h1 class="text-4xl font-bold text-center mb-12">Our Contact Details</h1>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white bg-opacity-20 rounded-lg p-6 backdrop-blur-lg hover:shadow-lg transition duration-300">
+                    <h2 class="text-2xl font-semibold mb-4 relative pl-8">
+                        <span class="absolute left-0 top-1 text-yellow-300">#</span>
+                        Program, Collaboration and Donation
+                    </h2>
+                    <div class="space-y-2">
+                        <h3 class="text-xl font-medium text-yellow-300">Sabrina Hikmah Ramadianti, S.Si</h3>
+                        <p class="text-sm opacity-90">Coordinator for Program, Communication, and Partnership</p>
+                        <p class="text-sm opacity-90">Phone: +62 856-1863-537</p>
+                        <p class="text-sm opacity-90">Email: sabrina.hikmah@ul.ac.id</p>
+                    </div>
+                </div>
+                <div class="bg-white bg-opacity-20 rounded-lg p-6 backdrop-blur-lg hover:shadow-lg transition duration-300">
+                    <h2 class="text-2xl font-semibold mb-4 relative pl-8">
+                        <span class="absolute left-0 top-1 text-yellow-300">#</span>
+                        Survey Completion and Service Info
+                    </h2>
+                    <div class="space-y-2">
+                        <h3 class="text-xl font-medium text-yellow-300">Rayhana, S.Ge</h3>
+                        <p class="text-sm opacity-90">Partnership Specialist</p>
+                        <p class="text-sm opacity-90">Phone: +62 887-1878-901</p>
+                        <p class="text-sm opacity-90">Email: rayhanaats@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="p-8 md:p-12">
+                    <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">Connect With Us</h2>
+                    <p class="text-center text-gray-600 mb-8">For any inquiries or request, please feel free to fill out the form here contact us</p>
+                    <form action="#" method="POST" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">
+                                Your Name <span class="text-red-500">*</span>
+                            </label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition duration-300">
+                        </div>
+                        <div>
+                            <label for="institution" class="block text-sm font-medium text-gray-700 mb-1">
+                                Your Institution <span class="text-red-500">*</span>
+                            </label>
+                            <input type="text" id="institution" name="institution" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition duration-300">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">
+                                Your Email <span class="text-red-500">*</span>
+                            </label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition duration-300">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">
+                                Intention in Enquiry<span class="text-red-500">*</span>
+                            </label>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <label class="flex items-center space-x-2">
+                                    <input type="radio" name="options" value="option1" class="text-emerald-600 focus:ring-emerald-500" required>
+                                    <span>Service Package</span>
+                                </label>
+                                <label class="flex items-center space-x-2">
+                                    <input type="radio" name="options" value="option2" class="text-emerald-600 focus:ring-emerald-500">
+                                    <span>Survey Completion</span>
+                                </label>
+                                <label class="flex items-center space-x-2">
+                                    <input type="radio" name="options" value="option3" class="text-emerald-600 focus:ring-emerald-500">
+                                    <span>Collaboration & Donation</span>
+                                </label>
+                                <label class="flex items-center space-x-2">
+                                    <input type="radio" name="options" value="other" class="text-emerald-600 focus:ring-emerald-500">
+                                    <span>Others</span>
+                                </label>
+                            </div>
+                            <div id="otherOptionInput" class="hidden mt-2">
+                                <input type="text" name="otherOption" placeholder="Please specify" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition duration-300">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">
+                                Your Message <span class="text-red-500">*</span>
+                            </label>
+                            <textarea id="message" name="message" rows="5" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition duration-300"></textarea>
+                        </div>
+                        <!-- Security Question Section -->
+                        <div>
+                          <label class="block text-sm font-medium text-gray-700 mb-1">
+                            Security Question: What is <span class="font-bold">3 + 5?</span> <span class="text-red-500">*</span>
+                          </label>
+                          <input type="number" name="security_answer" required placeholder="Your Answer" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition duration-300">
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="px-6 py-3 bg-emerald-600 text-white font-medium rounded-md hover:bg-emerald-700 transition duration-300 shadow-md hover:shadow-lg">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        // Show/hide the "Other" option input field
+        const optionsRadio = document.querySelectorAll('input[name="options"]');
+        const otherOptionInput = document.getElementById('otherOptionInput');
+
+        optionsRadio.forEach(radio => {
+            radio.addEventListener('change', function() {
+                if (this.value === 'other') {
+                    otherOptionInput.classList.remove('hidden');
+                    otherOptionInput.querySelector('input').required = true;
+                } else {
+                    otherOptionInput.classList.add('hidden');
+                    otherOptionInput.querySelector('input').required = false;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
