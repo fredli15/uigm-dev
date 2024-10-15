@@ -1,0 +1,846 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  /* Container */
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  
+  
+.navbar-top {
+    background-color: #33aae5;
+    color: white;
+    padding: 10px 0;
+  }
+  
+  .navbar-menu-top {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .left-menu {
+    margin-right: auto;
+  }
+  
+  .right-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .right-menu li {
+    margin-left: 20px;
+  }
+  
+  .navbar-menu-top li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .search-form {
+    display: flex;
+  }
+  
+  .search-form input {
+    padding: 5px;
+    border: none;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .search-form button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #0c3a56;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 3px 3px 0;
+  }
+  
+  .search-form button:hover {
+    background-color: #777;
+  }
+.navbar-bottom {
+    background-color: #fff;
+    border-bottom: 2px solid #ccc;
+    padding: 10px 40px; 
+  }
+  
+  .bottom-container {
+    display: flex;
+    align-items: center; /* Menjaga agar logo dan menu sejajar secara vertikal */
+    width: 100%;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    margin-left: 20px; /* Jarak antara logo dan tepi kiri */
+  }
+  
+  .logo img {
+    max-width: 80px; /* Ukuran logo */
+    height: auto;
+  }
+
+  .additional-image {
+    max-width: 50px; /* Ukuran gambar tambahan, sesuaikan sesuai kebutuhan */
+    height: auto;
+    margin-left: 20px; /* Jarak antara logo dan gambar tambahan */
+  }
+  
+  
+  .navbar-menu-bottom {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around; /* Menyebar menu di kanan */
+    align-items: center;
+    margin: 0;
+    flex-grow: 1; /* Memungkinkan menu untuk mengisi ruang kosong */
+  }
+  
+  .navbar-menu-bottom li {
+    margin: 0 10px; /* Jarak antar menu */
+  }
+  
+  .navbar-menu-bottom li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .navbar-menu-bottom li a:hover {
+    color: #007BFF;
+  }
+
+  .hero-section {
+    position: relative;
+    max-width: 100%;
+    height: auto; /* Membiarkan tinggi kontainer menyesuaikan gambar */
+    padding: 0; 
+    background-color: #2677a0; /* Warna latar belakang solid */
+    z-index: 1; /* Mengatur z-index untuk lapisan */
+  }
+  
+  .slideshow-container {
+    position: relative;
+    z-index: 2; /* Memastikan slideshow ditampilkan di atas latar belakang */
+  }
+  
+  .hero-section img {
+    width: 100%; /* Membuat gambar responsif */
+    max-height: 400px; /* Mengatur tinggi maksimum gambar */
+    height: auto; /* Membiarkan tinggi menyesuaikan proporsi gambar */
+    object-fit: contain; /* Memastikan gambar tetap utuh dalam area */
+    margin: 0 auto; /* Memusatkan gambar di dalam kontainer */
+    display: block; /* Menghilangkan ruang di bawah gambar */
+  }
+  
+  
+  
+
+  
+  .slideshow-container {
+    position: relative;
+    max-width: 100%;
+  }
+  
+  .mySlides {
+    display: none; /* Menyembunyikan semua slide kecuali yang aktif */
+  }
+  
+  img {
+    width: 100%; /* Membuat gambar responsif */
+  }
+  
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .dots {
+    position: absolute; /* Membuat posisi titik navigasi menjadi absolut */
+    top: 10px; /* Jarak dari atas kontainer hero section */
+    left: 50%; /* Memusatkan secara horizontal */
+    transform: translateX(-50%); /* Memastikan titik berada tepat di tengah */
+    display: flex; /* Menyusun titik secara horizontal */
+    gap: 10px; /* Jarak antar titik */
+  }
+  
+  .dot {
+    height: 12px; /* Tinggi titik */
+    width: 12px; /* Lebar titik */
+    margin: 0 2px; /* Jarak antar titik */
+    background-color: #bbb; /* Warna titik tidak aktif */
+    border-radius: 50%; /* Membuat titik menjadi bulat */
+    display: inline-block; /* Memungkinkan margin berfungsi dengan baik */
+    cursor: pointer; /* Menunjukkan bahwa titik dapat diklik */
+  }
+  
+  .dot:hover, .dot.active {
+    background-color: #717171; /* Warna titik saat hover atau aktif */
+  }
+
+/* Section Pendaftaran Mahasiswa Baru */
+.pendaftaran-section {
+  position: relative; /* Menjadikan section sebagai konteks untuk posisi overlay */
+  padding: 60px 20px;
+  text-align: center;
+  background: 
+    linear-gradient(rgba(255, 255, 255, 0.507), rgba(255, 255, 255, 0.6)), /* Overlay transparan */
+    url('assets/logo.webp'); /* Ganti dengan path gambar latar belakang Anda */
+  background-size: cover; /* Gambar latar menutupi seluruh area */
+  background-position: center; /* Memusatkan gambar latar */
+  background-repeat: no-repeat; /* Menghindari pengulangan gambar */
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150px; /* Sesuaikan tinggi overlay */
+  background-image: url('assets/border.png'); /* Ganti dengan path gambar overlay */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 10; /* Memastikan overlay berada paling atas */
+}
+
+.pendaftaran-content {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.831); /* Background putih dengan transparansi untuk konten */
+  padding: 40px;
+  border-radius: 10px;
+}
+
+/* Teks 1: Warna Biru */
+.pendaftaran-title {
+  color: #267ea9; /* Biru */
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.pendaftaran-subtitle {
+  color: #0e531e; 
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: bold
+}
+
+.pendaftaran-description {
+  color: #333; 
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.daftar-button {
+  background-color: #33aae5;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.daftar-button:hover {
+  background-color: #0056b3;
+}
+
+/* Section Program Studi */
+.program-studi-section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: rgba(12, 162, 203, 0.694); /* Hijau dengan transparansi */
+  background-image: url('assets/Section.png'); /* Gambar transparan */
+  background-size: cover; /* Membuat gambar memenuhi seluruh area */
+  background-position: center; /* Memusatkan gambar */
+  background-repeat: no-repeat; /* Mencegah pengulangan gambar */
+}
+
+/* Elemen dekoratif untuk teks 'Program Studi' */
+.section-title-program {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 40px;
+  position: relative; /* Menyiapkan elemen relatif untuk dekorasi tambahan */
+}
+
+/* Container untuk Program Studi */
+.program-studi-container {
+  display: flex;
+  justify-content: center; /* Memusatkan semua gambar */
+  gap: 20px; /* Jarak antar gambar */
+}
+
+/* Setiap Item Program Studi */
+.program-item {
+  flex: 0 1 300px; /* Membuat gambar memiliki lebar tetap 200px */
+  text-align: center;
+}
+
+.program-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Membuat gambar memiliki sudut yang melengkung */
+}
+
+/* Section Supporting Unit */
+.supporting-unit-section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: rgba(12, 162, 203, 0.694); /* Hijau dengan transparansi */
+  background-image: url('assets/Section.png'); /* Gambar transparan */
+  background-size: cover; /* Membuat gambar memenuhi seluruh area */
+  background-position: center; /* Memusatkan gambar */
+  background-repeat: no-repeat; /* Mencegah pengulangan gambar */
+}
+.section-title-support {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 40px;
+  position: relative; /* Menyiapkan elemen relatif untuk dekorasi tambahan */
+}
+
+.supporting-unit-container {
+  display: flex;
+  justify-content: center; /* Memusatkan ikon */
+  gap: 40px; /* Jarak antar ikon */
+}
+
+.supporting-unit-item {
+  flex: 0 1 100px; /* Lebar ikon */
+}
+
+.icon-circle {
+  display: inline-block; /* Memastikan lingkaran membungkus ikon */
+  width: 80px; /* Diameter lingkaran */
+  height: 80px; /* Diameter lingkaran */
+  border-radius: 50%; /* Membuat lingkaran */
+  background-color: rgba(255, 255, 255, 0.8); /* Warna latar belakang lingkaran */
+  display: flex; /* Menggunakan flex untuk memusatkan ikon di dalam lingkaran */
+  justify-content: center; /* Memusatkan ikon secara horizontal */
+  align-items: center; /* Memusatkan ikon secara vertikal */
+  margin: 0 auto; /* Memusatkan lingkaran dalam item */
+}
+
+.supporting-icon {
+  width: 100%; /* Memastikan ikon responsif */
+  height: auto; /* Menjaga proporsi ikon */
+}
+
+.icon-caption {
+  margin-top: 10px; /* Jarak antara ikon dan keterangan */
+  font-size: 14px; /* Ukuran font untuk keterangan */
+  color: #004009; /* Warna teks keterangan */
+  font-weight: bold;
+}
+
+/* Section Deskripsi */
+.why-choose-section {
+  padding: 60px 60px;
+  background-color: #fff; /* Warna latar belakang putih untuk section */
+  text-align: left; /* Mengatur teks rata kiri */
+}
+
+.section-title-desc {
+  font-size: 28px;
+  font-weight: bold;
+  color: #2677a0; /* Warna berbeda untuk judul, misalnya merah */
+  margin-bottom: 10px; /* Mengurangi jarak bawah judul */
+}
+
+.section-description {
+  font-size: 16px;
+  color: #333; /* Warna teks deskripsi */
+  line-height: 1.6; /* Jarak antar baris */
+  max-width: 100%; /* Lebar maksimum deskripsi */
+  margin: 0; /* Menghilangkan margin untuk pemusatan */
+  display: inline-block; /* Membuat deskripsi menjadi inline-block */
+}
+
+/* Section E-Visit Form */
+.e-visit-form-section {
+  position: relative; /* Membuat posisi relatif untuk pseudo-element */
+  padding: 40px 100px;
+  background-image: url('assets/img.webp'); /* Ganti dengan path gambar latar yang diinginkan */
+  background-size: cover; /* Menyesuaikan gambar untuk menutupi area */
+  background-position: center; /* Memusatkan gambar */
+  text-align: center; /* Memusatkan teks */
+  overflow: hidden; /* Menghindari konten meluap */
+}
+
+.e-visit-form-section::before {
+  content: ""; /* Membuat pseudo-element */
+  position: absolute; /* Posisi absolut untuk menutupi gambar */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(26, 84, 30, 0.909); /* Layer hitam dengan transparansi untuk meningkatkan kontras */
+  z-index: 1; /* Menempatkan di atas gambar */
+}
+
+.section-title-evisit {
+  position: relative; /* Membuat posisi relatif untuk menampilkan di atas pseudo-element */
+  font-size: 28px;
+  font-weight: bold;
+  color: #FFFFFF; /* Warna putih untuk judul */
+  margin-bottom: 40px;
+  z-index: 2; /* Menempatkan di atas layer transparan */
+}
+
+.section-description-evisit {
+  position: relative; /* Membuat posisi relatif untuk menampilkan di atas pseudo-element */
+  font-size: 16px;
+  color: #FFFFFF; /* Warna putih untuk deskripsi */
+  line-height: 1.6; /* Jarak antar baris */
+  margin-bottom: 20px; /* Jarak bawah deskripsi */
+  z-index: 2; /* Menempatkan di atas layer transparan */
+}
+
+.more-info-button {
+  position: relative; /* Membuat posisi relatif untuk menampilkan di atas pseudo-element */
+  display: inline-block; /* Membuat tombol tampil sebagai blok inline */
+  padding: 10px 20px; /* Padding untuk tombol */
+  background-color: #ffffff; /* Warna latar belakang tombol */
+  color: #000000; /* Warna teks tombol */
+  text-decoration: none; /* Menghilangkan garis bawah */
+  border-radius: 5px; /* Membuat sudut tombol melengkung */
+  transition: background-color 0.3s; /* Efek transisi */
+  z-index: 2; /* Menempatkan di atas layer transparan */
+}
+
+.more-info-button:hover {
+  background-color: #0056b3; /* Warna tombol saat hover */
+}
+
+/* Section Profile Mahasiswa dan Dosen */
+.profile-section {
+  padding: 50px 20px;
+  background: url('assets/Section.png') no-repeat center center; /* Background gambar transparan */
+  background-size: cover; /* Gambar memenuhi area section */
+  position: relative;
+  text-align: center;
+}
+
+.section-title-profile {
+  font-size: 28px;
+  color: #2677a0; /* Warna title */
+  margin-bottom: 20px;
+}
+
+.section-description {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.profile-box-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* Jarak antar box */
+}
+
+.profile-box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Memberikan sedikit bayangan */
+  width: 250px;
+  text-align: center;
+}
+
+.icon-container {
+  margin-bottom: 15px;
+}
+
+.profile-icon {
+  width: 80px; /* Ukuran icon */
+  height: auto;
+}
+
+.profile-box h3 {
+  font-size: 20px;
+  color: #2677a0; /* Warna hijau */
+  margin-bottom: 10px;
+}
+
+.profile-box p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Section Berita */
+.news-section {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.section-title-news {
+  font-size: 28px;
+  color: #267ea9; /* Warna title */
+  margin-bottom: 30px;
+}
+
+.news-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.news-box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: left;
+}
+
+.news-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0;
+}
+
+.news-box h3 {
+  font-size: 20px;
+  margin-top: 15px;
+  color: #333;
+}
+
+.news-box p {
+  font-size: 14px;
+  color: #666;
+  margin-top: 10px;
+}
+
+.more-news-btn-container {
+  margin-top: 30px;
+}
+
+.more-news-btn {
+  background-color: #267ea9;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.more-news-btn:hover {
+  background-color: #267ea9;
+}
+
+/* Section Pengembangan dan Riset */
+.research-section {
+  position: relative; /* Membuat posisi relatif untuk pseudo-element */
+  padding: 40px 100px;
+  background-image: url('assets/img.webp'); /* Ganti dengan path gambar latar yang diinginkan */
+  background-size: cover; /* Menyesuaikan gambar untuk menutupi area */
+  background-position: center; /* Memusatkan gambar */
+  text-align: center; /* Memusatkan teks */
+  overflow: hidden; /* Menghindari konten meluap */
+}
+
+
+.title-background {
+  background-color: #a09226; /* Warna latar belakang untuk title box */
+  padding: 10px 0; /* Jarak vertikal di sekitar title */
+  border-radius: 5px; /* Membuat sudut melengkung */
+  display: flex; /* Menggunakan flex untuk menempatkan konten di tengah */
+  justify-content: center; /* Memusatkan konten secara horizontal */
+  align-items: center; /* Memusatkan konten secara vertikal */
+  margin-bottom: 10px; /* Jarak di bawah title */
+
+}
+
+.research-section::before {
+  content: ""; /* Membuat pseudo-element */
+  position: absolute; /* Posisi absolut untuk menutupi gambar */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(26, 84, 30, 0.909); /* Layer hitam dengan transparansi untuk meningkatkan kontras */
+  z-index: 1; /* Menempatkan di atas gambar */
+}
+.section-title-riset {
+  position: relative; /* Membuat posisi relatif untuk menampilkan di atas pseudo-element */
+  font-size: 28px;
+  font-weight: bold;
+  color: #FFFFFF; /* Warna putih untuk judul */
+  margin-bottom: 40px;
+  z-index: 2; /* Menempatkan di atas layer transparan */
+}
+
+.research-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  z-index: 2;
+}
+
+
+.research-box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  height: 400px; /* Tinggi box ditambah agar lebih panjang */
+  display: flex; /* Menggunakan flex untuk menata isi box */
+  flex-direction: column; /* Menempatkan konten secara vertikal */
+  justify-content: space-between; /* Memberi ruang antara konten dan tombol */
+  z-index: 2;
+}
+
+.research-box h3 {
+  font-size: 20px;
+  margin-top: 10px;
+  color: #ffffff;
+  z-index: 2;
+}
+
+.research-box p {
+  font-size: 14px;
+  color: #666;
+  margin-top: 10px;
+  z-index: 2;
+}
+
+.more-btn {
+  background-color: #11844c;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: auto;
+  z-index: 2;
+}
+
+.more-btn:hover {
+  background-color: #267ea9;
+}
+
+/* campus section */
+.campus-section {
+  padding: 20px;
+  background-image: url('assets/Section.png'); /* Ganti dengan URL gambar yang diinginkan */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.box-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.campus-item {
+  width: 48%;
+}
+
+.campus-item h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  text-align: center;
+  color: #075e5d;
+}
+
+.video-container, .map-container {
+  margin-top: 10px;
+}
+
+.campus-section {
+  padding: 20px;
+}
+
+.box-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.campus-item {
+  width: 48%;
+}
+
+.section-title {
+  margin-bottom: 15px;
+  font-size: 20px;
+  text-align: left; /* Mengatur rata kiri */
+  color: #333;
+}
+
+.video-container, .map-container {
+  margin-top: 10px;
+}
+
+
+
+/* Section Before Footer */
+.contact-info-section {
+  background-color: #33aae5; /* Background abu-abu muda */
+  padding: 50px 15%;
+  display: flex;
+  justify-content: center; /* Untuk menempatkan section di tengah secara horizontal */
+}
+
+.contact-info-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  gap: 30px; /* Jarak antara kolom */
+}
+
+.info-box {
+  width: 30%; /* Membuat tiga kolom dengan lebar seimbang */
+  margin-bottom: 20px; /* Menambahkan jarak bawah pada setiap box */
+  
+}
+
+.info-box h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.info-box p, .info-box ul {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.info-box ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.info-box ul li {
+  margin-bottom: 10px;
+}
+
+/* Sosmed Icons */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.social-icons img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Call Center and Email */
+.contact-details {
+  margin-bottom: 15px;
+}
+
+.contact-details p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.divider {
+  border: none; /* Menghilangkan border default */
+  border-top: 2px solid #cecb13; /* Menambahkan garis horizontal */
+  margin: 10px 0; /* Jarak atas dan bawah garis */
+  width: 100%; /* Memastikan garis memenuhi lebar box */
+}
+
+
+
+
+  /* Footer */
+  .footer {
+    position: fixed; /* Membuat footer tetap di bagian bawah */
+    left: 0; /* Mengatur posisi kiri */
+    bottom: 0; /* Mengatur posisi bawah */
+    width: 100%; /* Memastikan footer mengambil lebar penuh */
+    background-color: #333; /* Warna latar belakang footer */
+    color: white; /* Warna teks footer */
+    text-align: center; /* Memusatkan teks */
+    padding: 10px 0; /* Jarak atas dan bawah di footer */
+    z-index: 10; /* Memastikan footer di atas konten lainnya */
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between; /* Mengatur konten footer dengan jarak */
+    align-items: center; /* Menjaga agar konten footer sejajar secara vertikal */
+    max-width: 1200px; /* Lebar maksimum konten footer */
+    margin: 0 auto; /* Memusatkan konten */
+    padding: 0 20px; /* Jarak kiri dan kanan */
+  }
+  
+  .footer-menu {
+    list-style-type: none; /* Menghapus bullet dari list */
+    margin: 0; /* Menghapus margin */
+    padding: 0; /* Menghapus padding */
+    display: flex; /* Menyusun menu secara horizontal */
+  }
+  
+  .footer-menu li {
+    margin: 0 10px; /* Jarak antar item menu */
+  }
+  
+  .footer-menu li a {
+    color: white; /* Warna teks link */
+    text-decoration: none; /* Menghapus garis bawah pada link */
+  }
+  
+  .footer-menu li a:hover {
+    text-decoration: underline; /* Garis bawah saat hover */
+  }
+  
