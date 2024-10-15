@@ -3,10 +3,18 @@
   "version": "1.0.0",
   "main": "script.js",
   "scripts": {
+<<<<<<< HEAD
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview"
+=======
+    "start": "react-scripts start", 
+    "build": "react-scripts build",   
+    "test": "echo \"Error: no test specified\" && exit 1", 
+    "eject": "react-scripts eject"     
+>>>>>>> b563e9df973a432a1320a379ba89529d1d52e16d
   },
+
   "keywords": [],
   "author": "",
   "license": "ISC",
